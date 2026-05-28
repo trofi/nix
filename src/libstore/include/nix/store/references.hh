@@ -35,7 +35,7 @@ struct RewritingSink : Sink
     Sink & nextSink;
     uint64_t pos = 0;
 
-    std::vector<uint64_t> matches;
+    std::set<uint64_t> matches;
 
     RewritingSink(const std::string & from, const std::string & to, Sink & nextSink);
     RewritingSink(const StringMap & rewrites, Sink & nextSink);
